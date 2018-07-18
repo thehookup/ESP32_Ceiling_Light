@@ -1,0 +1,71 @@
+##Add to configuration.yaml file:
+
+  - platform: mqtt
+    name: "Family Room Front Left"
+    on_command_type: "brightness"
+    command_topic: "FamilyRoom/FrontLeft"
+    brightness_command_topic: "FamilyRoom/FrontLeft"
+    state_topic: "FamilyRoom/FrontLeft/Status"
+    retain: true
+  - platform: mqtt
+    name: "Family Room Front Right"
+    on_command_type: "brightness"
+    command_topic: "FamilyRoom/FrontRight"
+    brightness_command_topic: "FamilyRoom/FrontRight"
+    state_topic: "FamilyRoom/FrontRight/Status"
+    retain: true
+  - platform: mqtt
+    name: "Family Room Front Middle"
+    on_command_type: "brightness"
+    command_topic: "FamilyRoom/FrontMiddle"
+    brightness_command_topic: "FamilyRoom/FrontMiddle"
+    state_topic: "FamilyRoom/FrontMiddle/Status"
+    retain: true
+  - platform: mqtt
+    name: "Family Room Middle Left"
+    on_command_type: "brightness"
+    command_topic: "FamilyRoom/MiddleLeft"
+    brightness_command_topic: "FamilyRoom/MiddleLeft"
+    state_topic: "FamilyRoom/MiddleLeft/Status"
+    retain: true
+  - platform: mqtt
+    name: "Family Room Middle Right"
+    on_command_type: "brightness"
+    command_topic: "FamilyRoom/MiddleRight"
+    brightness_command_topic: "FamilyRoom/MiddleRight"
+    state_topic: "FamilyRoom/MiddleRight/Status"
+    retain: true
+  - platform: mqtt
+    name: "Family Room Back Left"
+    on_command_type: "brightness"
+    command_topic: "FamilyRoom/BackLeft"
+    brightness_command_topic: "FamilyRoom/BackLeft"
+    state_topic: "FamilyRoom/BackLeft/Status"
+    retain: true
+  - platform: mqtt
+    name: "Family Room Back Right"
+    on_command_type: "brightness"
+    command_topic: "FamilyRoom/BackRight"
+    brightness_command_topic: "FamilyRoom/BackRight"
+    state_topic: "FamilyRoom/BackRight/Status"
+    retain: true
+  - platform: mqtt
+    name: "Family Room Back Middle"
+    on_command_type: "brightness"
+    command_topic: "FamilyRoom/BackMiddle"
+    brightness_command_topic: "FamilyRoom/BackMiddle"
+    state_topic: "FamilyRoom/BackMiddle/Status"
+    retain: true
+	
+##Add to groups.yaml file:
+  familyRoomCeilingLight:
+    name: Family Room Light
+    entities:
+      - light.family_room_front_left
+      - light.family_room_front_middle
+      - light.family_room_front_right
+      - light.family_room_middle_left
+      - light.family_room_middle_right
+      - light.family_room_back_left
+      - light.family_room_back_middle
+      - light.family_room_back_right
